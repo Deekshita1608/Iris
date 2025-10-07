@@ -1,13 +1,9 @@
 pipeline{
-    agent{
-        node{
-            label 'local'
-        }
-    }
+    agent any
     stages{
         stage('Checkout Code') {
             steps {
-                git branch: 'master', url: 'file:///C:/Users/deeks/Desktop/MLOPs/jenkins/microservices_docker_compose'
+                git branch: 'master', url: 'https://github.com/Deekshita1608/Iris.git'
             }
         }
         stage('Show workspace'){

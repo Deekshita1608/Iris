@@ -2,10 +2,14 @@ pipeline{
     agent{
         node{
             label 'local'
-            customWorkspace 'C:\\Users\\deeks\\Desktop\\MLOPs\\jenkins\\microservices_docker_compose'
         }
     }
     stages{
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', url: 'file:\\\C:\\Users\\deeks\\Desktop\\MLOPs\\jenkins\\microservices_docker_compose'
+            }
+        }
         stage('Show workspace'){
             steps{
                 bat 'cd'

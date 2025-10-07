@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'file:///C:/Users/deeks/Desktop/MLOPs/jenkins/microservices_docker_compose'
+                git branch: 'master', url: 'file:///C:/Users/deeks/Desktop/MLOPs/jenkins/microservices_docker_compose'
             }
         }
         stage('Show workspace'){

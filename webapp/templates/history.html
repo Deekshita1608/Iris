@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<title>Flask Deployment</title>
+<body>
+    <h2>Iris flower species prediction history</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Sepal Length</th>
+            <th>Sepal Width</th>
+            <th>Petal Length</th>
+            <th>Petal Width</th>
+            <th>Prediction</th>
+        </tr>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.id }}</td>
+            <td>{{ entry.sepal_length }}</td>
+            <td>{{ entry.sepal_width }}</td>
+            <td>{{ entry.petal_length }}</td>
+            <td>{{ entry.petal_width }}</td>
+            <td>{{ entry.prediction }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
